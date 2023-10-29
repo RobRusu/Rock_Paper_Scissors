@@ -5,17 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <script>
+    let computerChoice;
+    let playerChoice;
+    let gameResult;
+
     function getComputerChoice(){
       let choice = Math.floor(Math.random() * 3);
       if (choice === 0){
-        console.log("Rock");
+        return computerChoice = "Computer: Rock";
       } else if (choice === 1){
-        console.log("Paper")
+        return computerChoice = "Computer: Paper";
       } else {
-        console.log("Scissors")
+        return computerChoice = "Computer: Scissors";
       }
     }
+
+
+    function getPlayerChoice(){
+      let playerPrompt = prompt("Pick your choice!")
+      playerPrompt = playerPrompt.toLowerCase();
+      if (playerPrompt === "rock"){
+        return playerChoice = "Player: Rock"
+      } else if (playerPrompt === "paper"){
+        return playerChoice = "Player: Paper"
+      } else if (playerPrompt === "scissors"){
+        return playerChoice = "Player: Scissors"
+      } else {
+        return playerChoice = "Invalid input. Game over!"
+      }
+    }
+
+    
+    function singleRound(playerSelection = playerChoice, computerSelection = computerChoice){
+      if ((playerSelection === "Player: Rock" && computerSelection === "Computer: Rock") || (playerSelection === "Player: Paper" && computerSelection === "Computer: Paper") || (playerSelection === "Player: Scissors" && computerSelection === "Computer: Scissors")){
+        return gameResult = "It's a tie!";
+      } else if (playerSelection === "Player: Rock" && computerSelection === "Computer: Scissors"){
+        return gameResult = "You win! Rock beats Scissors";
+      } else if (playerSelection === "Player: Rock" && computerSelection === "Computer: Paper"){
+        return gameResult = "You lose! Paper beats Rock";
+      } else if (playerSelection === "Player: Paper" && computerSelection === "Computer: Rock"){
+        return gameResult = "You win! Paper beats Rock";
+      } else if (playerSelection === "Player: Paper" && computerSelection === "Computer: Scissors"){
+        return gameResult = "You lose! Scissors beats Paper";
+      } else if (playerSelection === "Player: Scissors" && computerSelection === "Computer: Paper"){
+        return gameResult = "You win! Scissors beats Paper";
+      } else if (playerSelection === "Player: Scissors" && computerSelection === "Computer: Rock"){
+        return gameResult = "You lose! Rock beats Scissors"
+      }
+    }
+    
+    getPlayerChoice();
     getComputerChoice();
+    console.log(playerChoice);
+    console.log(computerChoice);
+    singleRound();
+    console.log(gameResult);
   </script>
 </head>
 <body>
