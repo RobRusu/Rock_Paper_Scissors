@@ -54,12 +54,158 @@
       }
     }
     
-    getPlayerChoice();
-    getComputerChoice();
-    console.log(playerChoice);
-    console.log(computerChoice);
-    singleRound();
-    console.log(gameResult);
+
+    function game(){
+      let counter = 1;
+      let playerScore = 0;
+      let computerScore = 0;
+      getPlayerChoice();
+      getComputerChoice();
+      console.log(`Round ${counter}`);
+      console.log(playerChoice);
+      console.log(computerChoice);
+      singleRound();
+      console.log(gameResult);
+      counter++;
+      if (gameResult === "You win! Rock beats Scissors"){
+        playerScore++;
+      } else if (gameResult === "You lose! Paper beats Rock"){
+        computerScore++;
+      } else if (gameResult === "You win! Paper beats Rock"){
+        playerScore++;
+      } else if (gameResult === "You lose! Scissors beats Paper"){
+        computerScore++;
+      } else if (gameResult === "You win! Scissors beats Paper"){
+        playerScore++;
+      } else if (gameResult === "You lose! Rock beats Scissors"){
+        computerScore++;
+      } else {
+        computerScore = computerScore + 0;
+        playerScore = playerScore + 0;
+      }
+      console.log(`Score: Player: ${playerScore} - Computer: ${computerScore}`)
+      console.log("-------------------------------------------------------------")
+
+      getPlayerChoice();
+      getComputerChoice();
+      console.log(`Round ${counter}`);
+      console.log(playerChoice);
+      console.log(computerChoice);
+      singleRound();
+      console.log(gameResult);
+      counter++;
+      if (gameResult === "You win! Rock beats Scissors"){
+        playerScore++;
+      } else if (gameResult === "You lose! Paper beats Rock"){
+        computerScore++;
+      } else if (gameResult === "You win! Paper beats Rock"){
+        playerScore++;
+      } else if (gameResult === "You lose! Scissors beats Paper"){
+        computerScore++;
+      } else if (gameResult === "You win! Scissors beats Paper"){
+        playerScore++;
+      } else if (gameResult === "You lose! Rock beats Scissors"){
+        computerScore++;
+      } else {
+        computerScore = computerScore + 0;
+        playerScore = playerScore + 0;
+      }
+      console.log(`Score: Player: ${playerScore} - Computer: ${computerScore}`)
+      console.log("-------------------------------------------------------------")
+
+      getPlayerChoice();
+      getComputerChoice();
+      console.log(`Round ${counter}`);
+      console.log(playerChoice);
+      console.log(computerChoice);
+      singleRound();
+      console.log(gameResult);
+      counter++;
+      if (gameResult === "You win! Rock beats Scissors"){
+        playerScore++;
+      } else if (gameResult === "You lose! Paper beats Rock"){
+        computerScore++;
+      } else if (gameResult === "You win! Paper beats Rock"){
+        playerScore++;
+      } else if (gameResult === "You lose! Scissors beats Paper"){
+        computerScore++;
+      } else if (gameResult === "You win! Scissors beats Paper"){
+        playerScore++;
+      } else if (gameResult === "You lose! Rock beats Scissors"){
+        computerScore++;
+      } else {
+        computerScore = computerScore + 0;
+        playerScore = playerScore + 0;
+      }
+      console.log(`Score: Player: ${playerScore} - Computer: ${computerScore}`)
+      console.log("-------------------------------------------------------------")
+
+      getPlayerChoice();
+      getComputerChoice();
+      console.log(`Round ${counter}`);
+      console.log(playerChoice);
+      console.log(computerChoice);
+      singleRound();
+      console.log(gameResult);
+      counter++;
+      if (gameResult === "You win! Rock beats Scissors"){
+        playerScore++;
+      } else if (gameResult === "You lose! Paper beats Rock"){
+        computerScore++;
+      } else if (gameResult === "You win! Paper beats Rock"){
+        playerScore++;
+      } else if (gameResult === "You lose! Scissors beats Paper"){
+        computerScore++;
+      } else if (gameResult === "You win! Scissors beats Paper"){
+        playerScore++;
+      } else if (gameResult === "You lose! Rock beats Scissors"){
+        computerScore++;
+      } else {
+        computerScore = computerScore + 0;
+        playerScore = playerScore + 0;
+      }
+      console.log(`Score: Player: ${playerScore} - Computer: ${computerScore}`)
+      console.log("-------------------------------------------------------------")
+
+      getPlayerChoice();
+      getComputerChoice();
+      console.log(`Round ${counter}`);
+      console.log(playerChoice);
+      console.log(computerChoice);
+      singleRound();
+      console.log(gameResult);
+      counter++;
+      if (gameResult === "You win! Rock beats Scissors"){
+        playerScore++;
+      } else if (gameResult === "You lose! Paper beats Rock"){
+        computerScore++;
+      } else if (gameResult === "You win! Paper beats Rock"){
+        playerScore++;
+      } else if (gameResult === "You lose! Scissors beats Paper"){
+        computerScore++;
+      } else if (gameResult === "You win! Scissors beats Paper"){
+        playerScore++;
+      } else if (gameResult === "You lose! Rock beats Scissors"){
+        computerScore++;
+      } else {
+        computerScore = computerScore + 0;
+        playerScore = playerScore + 0;
+      }
+      console.log(`Score: Player: ${playerScore} - Computer: ${computerScore}`)
+      console.log("-------------------------------------------------------------")
+
+      console.log("End of game results")
+      if (playerScore > computerScore){
+        console.log("You won! You beat the computer.")
+      } else if (computerScore > playerScore){
+        console.log("You lost! The computer is simply better.")
+      } else {
+        console.log("It's a tie!")
+      }
+    }
+
+    game();
+
   </script>
 </head>
 <body>
